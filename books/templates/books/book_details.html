@@ -3,5 +3,13 @@
 {% block title %} Welcome{% endblock title %}
 
 {% block content %}
-	<h2>This welcome page</h2>
+	<h2>Book Details</h2>
+	<div class="card">
+	<div>{{object.title}}</div>
+	 <div class="card-body">
+	  <ul class="list-group list-group-flush">
+	    <li class="list-group-item">Author:<span>{{objec.author}}</span>></li>
+	  </ul>
+	</div>
+	</div>	
 {% endblock content %}

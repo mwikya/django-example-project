@@ -30,3 +30,7 @@ class BookDetailView(DetailView):
 class BookUpdateView(UpdateView):
     model = Book
     template_name = "books/book_update.html"
+    form_class = BookForm
+
+    def get_object(self, queryset=None):
+        return Book.objects.get(pk=self.kwargs['book_id'])
